@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --bg-color: #c7ccc7;
+  --color-text: #f2f3f2;
+  --bg-form: #576057;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+}
+
+.form-container {
+  padding: 2em 4em 4em 4em;
+  border-radius: 20px;
+  background-color: var(--bg-form);
+  box-shadow: -2px 5px 5px 0px #4b534b;
+}
+
+.form-container h3 {
+  color: var(--color-text);
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0;
+  padding: 35px 0px;
+}
+
+.input-wrap {
+  position: relative;
+  margin: 10px 0px 15px 0px;
+  width: 100%;
+}
+
+.input-field {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--color-text);
+  display: block;
+  width: 100%;
+  padding: 15px 0 5px 0;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.input-field:focus,
+.input-field:valid {
+  outline: none;
+  border-bottom-color: #c7ccc7;
+}
+
+.input-label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+  color: var(--color-text);
+}
+
+.input-label span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0.3s;
+  transition-delay: var(--delay);
+}
+.input-field:focus + .input-label span,
+.input-field:valid + .input-label span {
+  transform: translateY(-30px);
+  color: #c7ccc7;
+}
+
+/* staggered delays */
+.input-label span:nth-child(1) {
+  transition-delay: 0ms;
+}
+.input-label span:nth-child(2) {
+  transition-delay: 50ms;
+}
+.input-label span:nth-child(3) {
+  transition-delay: 100ms;
+}
+.input-label span:nth-child(4) {
+  transition-delay: 150ms;
+}
+.input-label span:nth-child(5) {
+  transition-delay: 200ms;
+}
+.input-label span:nth-child(6) {
+  transition-delay: 250ms;
+}
+.input-label span:nth-child(7) {
+  transition-delay: 300ms;
+}
+.input-label span:nth-child(8) {
+  transition-delay: 350ms;
+}
+
+.input-field:focus + .input-label span,
+.input-field:valid + .input-label span {
+  color: #c7ccc7;
+  transform: translateY(-30px);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.actions button {
+  padding: 0.6em 1em;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-text);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.b-positive {
+  background-color: #50c878;
+}
+
+.b-negative {
+  background-color: #e5484d;
+}

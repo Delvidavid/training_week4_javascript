@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling DOM</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h3 class="form-title">Register Formulary</h3>
+        <div class="input-wrap">
+            <input type="text" class="input-field" placeholder="User name" id="name" required>
+            <label class="input-label"></label>
+        </div>
+        <div class="input-wrap">
+            <input type="password" class="input-field" placeholder="Password" id="password" required>
+            <label class="input-label"></label>
+        </div>
+        <div class="input-wrap">
+            <input type="password" class="input-field" placeholder="Repeat Password" id="repeat" required>
+            <label class="input-label"></label>
+        </div>
+        <div class="input-wrap">
+            <input type="email" class="input-field" placeholder="Email" id="email" required>
+            <label class="input-label"></label>
+        </div>
+        <div class="actions">
+            <button class="b-negative" id="clear" >Clear</button>
+            <button class="b-positive" id="register" >Register</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
